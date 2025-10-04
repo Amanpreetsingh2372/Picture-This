@@ -6,6 +6,7 @@
   <title>Picture This Blog</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="main-header">
     <div class="heading">
@@ -13,21 +14,22 @@
       <h4>A Blog About Visual Stories</h4>
     </div>
 
+    <!-- Responsive image setup -->
     <picture>
-      <!-- Use one fixed square image for large screens -->
+      <!-- For large screens (square image) -->
       <source 
-        srcset="images/museum-square-960w.jpg"
-        media="(min-width: 960px)"
+        media="(min-width: 960px)" 
+        srcset="images/museum-960x960.jpg" 
         type="image/jpeg">
 
-      <!-- Landscape image for small screens -->
+      <!-- For smaller screens (landscape image) -->
       <source 
-        srcset="images/museum-640w.jpg"
-        media="(max-width: 959px)"
+        media="(max-width: 959px)" 
+        srcset="images/museum-640w.jpg" 
         type="image/jpeg">
 
       <!-- Fallback image -->
-      <img src="images/museum-640w.jpg" alt="Art gallery photo">
+      <img src="images/museum-640w.jpg" alt="Museum display wall">
     </picture>
   </header>
 </body>
