@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
+  <title>Picture This Blog</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="header">
-    <div class="title">
+  <header class="main-header">
+    <div class="heading">
       <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
+      <h4>A Blog About Visual Stories</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
 
+    <picture>
+      <!-- Use one fixed square image for large screens -->
+      <source 
+        srcset="images/museum-square-960w.jpg"
+        media="(min-width: 960px)"
+        type="image/jpeg">
+
+      <!-- Landscape image for small screens -->
+      <source 
+        srcset="images/museum-640w.jpg"
+        media="(max-width: 959px)"
+        type="image/jpeg">
+
+      <!-- Fallback image -->
+      <img src="images/museum-640w.jpg" alt="Art gallery photo">
+    </picture>
   </header>
 </body>
-
 </html>
